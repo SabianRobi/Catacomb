@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Katakomba</title>
+</head>
+<body>
+  <div class="row" id="randomFeherCsikEllen">
+    <div class="col-12" id="tartalom">
+      <h1 class="text-center">Katakomba</h1>
+      <div id="kezdolap">
+        <h2>Beállítások</h2>
+        <p>Játékosok száma:
+        <select id="jatekosokSzama">
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select></p>
+        <p>Kincsek száma játékosonként: <input type="number" id="kincsekSzama" value="2" min="1" max="12"></p>
+        <button id="inditasGomb">Játék indítása</button>
+        <button id="leirasGomb">Leírás megjelenítése</button>
+      </div>
+      <div id="leiras" hidden>
+        <h2>A játék leírása</h2>
+        <p>A katakomba szobáit egy 7x7-es négyzetrács cellái jelképezik. Minden szobában adott, hogy hány falán van ajtó. Ha két szomszédos szoba érintkező falán egy-egy ajtó van, akkor át lehet menni egyik szobából a másikba. A négyzetrács páros sorait és oszlopait el lehet tolni, a többi szoba végig rögzített a játék során. Az eltolásokkal az ajtókon keresztül utak nyílnak a szobák között, így lehet eljutni a kincsekhez. Mindegyik játékos arra törekszik, hogy a katakomba szobáinak ötletes eltolásával eljusson a kincsekhez. Aki elsőként találja meg mindahányat és kiindulópontjára sikeresen visszaérkezik az a nyertes.</p>
+      </div>
+      <div id="jatek" class="text-center" hidden>
+        <table>
+          <tr>
+            <td>
+              <div id="vaszonDiv">
+                <canvas width="540" height="540" id="vaszon"></canvas>
+              </div>
+            </td>
+            <td>
+              <div id="adatokDiv">
+                <p>Játékosok</p>
+                <ul id="jatekosok">
+                </ul>
+                
+                <p>Megtalálandó kincsek</p>
+                <ol id="kincsek">
+                </ol>
+                <p>Beszúrandó mező</p>
+                <div class="text-center">
+                  <canvas width="60" height="60" id="beszurando"></canvas>
+                  <img src="./kepek/mezok/forgatas.png" width="30" height="30" id="forgatas">
+                </div>
+                
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="ujJatek" class="text-center" hidden>
+        <p>A játéknak vége! Nyertes játékos: <span id="nyertes"></span></p>
+        <button id="ujJatekGomb">Új játék kezdése</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>

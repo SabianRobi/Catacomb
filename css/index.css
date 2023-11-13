@@ -1,0 +1,93 @@
+/* Kezdőlap */
+.row#randomFeherCsikEllen {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+html, .row {
+  background-color: blanchedalmond;
+}
+
+#tartalom {
+  min-width: 800px !important;
+  width: 800px !important;
+  margin: 0 auto;
+  background-color: #FFFDD0;
+  padding: 1em !important;
+  padding-bottom: 10vh;
+  font-size: medium;
+  text-align: justify;
+  border: 2px solid black;
+}
+
+h2 {
+  margin-top: 1em !important;
+}
+
+#kincsekSzama {
+  width: 50px !important;
+}
+
+/* Játéktér*/
+canvas {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+table {
+  display: inline-block;
+}
+
+ul {
+  padding-left: 0 !important;
+  list-style-type: none
+}
+
+.kincs, .jatekos {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  background-color: burlywood;
+  transform: rotate("90deg");
+}
+
+.jatekos {
+  margin-bottom: 0;
+}
+
+ol#kincsek {
+  margin-left: 20px;
+  padding: 0;
+}
+
+#adatokDiv {
+ margin-left: 0.75em;
+}
+
+ul#jatekosok{
+  margin-left: 20px;
+}
+
+div#adatokDiv > p {
+  margin-bottom: 0.25em;
+}
+
+div#adatokDiv>ul>li, div#adatokDiv>ol>li>ul>li {
+  display: inline-block;
+}
+
+#adatokDiv {
+  min-width: max-content;
+}
+
+#forgatas {
+  margin-left: 10px;
+  margin-top: -50px;
+}
+
+.soronLevoJatekos {
+  border: 5px solid black;
+}
